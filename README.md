@@ -1,4 +1,4 @@
-# DiscordVCOvserver
+# DiscordVCObserver
 
 ## 説明
 Discordで全てのボイスチャンネルの出入りを記録するBOT  
