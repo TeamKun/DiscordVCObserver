@@ -78,6 +78,13 @@ class Log:
 # VCのメンバー移動時の処理
 @bot.event
 async def on_voice_state_update(member: discord.Member, before: discord.VoiceState, after: discord.VoiceState):
+    # 対象のサーバー以外は無視
+    if before.channel and before.channel.guild.id != ss_guild:
+        return
+
+    if after.channel and after.channel.guild.id != ss_guild:
+        return
+
     # 移動していない
     if before.channel == after.channel:
         return
